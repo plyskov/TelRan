@@ -1,0 +1,203 @@
+   0 cd /home
+   1 ls
+   2 ls help
+   3 ls -?
+   4 mkdir user1
+   5 ls -l
+   6 ls
+   7 mkdir task1
+   8 rmdir task1
+   9 ls
+  10 cd user1
+  11 mkdir task1
+  12 cd task1
+  13 cd .
+  14 cd ..
+  15 ls
+  16 cd task1/
+  17 touch file1.txt
+  18 pwd
+  19 pwd -/
+  20 pwd -?
+  21 pwd -help
+  22 ls -l
+  23 ls -a
+  24 ls -al
+  25 tree /home/
+  26 tree 
+  27 tree /
+  28 date
+  29 history
+  30 mkdir /home/user2/task2
+  31 mkdir /home/user2/task2 -p 
+  32 tree /home/
+  33 touch /home/user/user2/file2.txt
+  34 touch /home/user2/file2.txt
+  35 tree /home/
+  36 touch /home/user2/task2/file2.txt
+  37 tree /home/
+  38 mkdir /home/user3/task3 -p 
+  39 tree /home/
+  40 rm /home/user2/file2.txt 
+  41 tree
+  42 tree /home/
+  43 mkdir /home/user3/task3
+  44 ls -al
+  45 ls -al /home/user2/task2/file2.txt 
+  46 pwd
+  47 cd /home/
+  48 ls
+  49 cp /home/user2/task2/file2.txt user3/task3/file3.txt
+  50 tree
+  51 mkdir /home/user4/task4 -p
+  52 touch /home/user4/task4/file4.txt
+  53 tree
+  54 ls -a /
+  55 ls /
+  56 ls -a /
+  57 ls /home/
+  58 ls /home/user1/task1/file1.txt
+  59 ls /home/user1/task1/file1.txt -l
+  60 ls -l /home/user2/task2/file2.txt 
+  61 ls -l /home/user3/task3/file3.txt 
+  62 ls -l /home/user4/task4/file4.txt 
+  63 history
+  64 cp /home/user2/task2/file2.txt /tmp
+  65 ls -l
+  66 cp /home/user2/task2/file2.txt /tmp/
+  67 cp /home/user3/task3/file3.txt /tmp/
+  68 ls /tmp/
+  69 cp /home/user2/task2/file2.txt /tmp/newfile
+  70 ls /tmp/
+  71 ls /tmp/ -al
+  72 mv /tmp/newfile /opt/
+  73 ls /tmp/
+  74 ls /opt/
+  75 ls /
+  76 cp /home/user2 /tmp/newfile
+  77 cp -r /home/user2 /tmp/newfile
+  78 tree /tmp/
+  79 cp -r /home/user2/ /tmp/
+  80 tree /tmp/
+  81 ls /tmp/
+  82 mv /opt/newfile /opt/newfile.txt
+  83 ls /opt/
+  84 mv /opt/newfile.txt /tmp/new_test
+  85 rm /tmp/file2.txt 
+  86 ls /tmp/
+  87 history > /tmp/history.txt
+  88 export_file /tmp/history.txt 
+  89 ls /tmp/
+  90 ls -l /tmp/
+  91 ls -l /dev/
+  92 mkdir --help
+  93 mkdir temp1 temp2 temp3 gggg
+  94 ls
+  95 rm gggg/
+  96 rmdir gggg/
+  97 ls
+  98 ls -l
+  99 ls /etc/
+ 100 ls /etc/ca-certificates
+ 101 touch --help
+ 102 cp --help
+ 103 ls --help
+ 104 ls -1
+ 105 date --help
+ 106 rm --help
+ 107 mkdir qwerty
+ 108 cd /var/lib/apk
+ 109 pwd
+ 110 cd /home/qwerty/
+ 111 ls -a
+ 112 cd .
+ 113 cd ..
+ 114 ls
+ 115 cd /var/
+ 116 cd lib/
+ 117 cd apk/
+ 118 ls
+ 119 cd ..
+ 120 cd /var/lib/misc/
+ 121 cd ../../../home/qwerty/
+ 122 mkdir -p 1/2/3/4/5
+ 123 tree
+ 124 touch test.txt
+ 125 tree 
+ 126 tree /home/
+ 127 cd /1/2/3/4/5
+ 128 cd 1/2/3/4/5/
+ 129 ls ../../../../../test.txt 
+ 130 ls ../../../../../test.txt -l
+ 131 cd /home
+ 132 cd qwerty/
+ 133 mkdir 10
+ 134 cd 10/
+ 135 mkdir 20
+ 136 cd 20/
+ 137 mkdir 30
+ 138 cd 30/
+ 139 mkdir 40
+ 140 cd 40/
+ 141 tree
+ 142 tree /home/qwerty/
+ 143 touch /home/qwerty/1/1.txt
+ 144 touch /home/qwerty/1/2/2.txt
+ 145 touch /home/qwerty/1/2/3/3.txt
+ 146 touch /home/qwerty/1/2/3/4/4.txt
+ 147 touch /home/qwerty/1/2/3/4/5/5.txt
+ 148 tree /home/qwerty/
+ 149 locale
+ 150 cd /home/qwerty/
+ 151 ls
+ 152 mkdir as\ df
+ 153 tree
+ 154 cd as\ df
+ 155 mkdir \ 123
+ 156 tree
+ 157 tree /home/qwerty/
+ 158 cd ..
+ 159 ls -l
+ 160 mkdir .\ 123
+ 161 ls
+ 162 ls -l
+ 163 mkdir \.\ 123
+ 164 mv \ 123 .123
+ 165 ls -al
+ 166 cd .\ 123
+ 167 cd ..
+ 168 tree
+ 169 touch 10/10.txt
+ 170 touch 10/20/20.txt
+ 171 touch 10/20/30/30.txt
+ 172 touch 10/20/30/40/40.txt
+ 173 tree
+ 174 mkdir copy
+ 175 cp 10/20/30/30.txt /home/qwerty/copy/
+ 176 ls copy/
+ 177 cd 1/2/3/
+ 178 cp ../../../10/20/20.txt ../../../copy/
+ 179 сз
+ 180 cp
+ 181 cd /home/qwerty/
+ 182 cp /home/qwerty/1/2/ /home/qwerty/copy/ -r
+ 183 tree
+ 184 cp -r /home/qwerty/1/2/ /home/qwerty/copy/003 
+ 185 tree /home/qwerty/copy/
+ 186 mv copy/20.txt copy/003/4
+ 187 tree copy/
+ 188 rmdir copy/2/3/4
+ 189 rm -r copy/2/3/4/
+ 190 tree copy/
+ 191 pwd
+ 192 ლს -ლ
+ 193 ls -l
+ 194 ls -lр
+ 195 ls -lh
+ 196 ls /home/etc
+ 197 ls /home/etc/
+ 198 ls /etc
+ 199 ls -lh /etc
+ 200 ls -l /etc
+ 201 ls -lh /etc
+ 202 history > /tmp/history.txt
