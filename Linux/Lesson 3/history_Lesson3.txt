@@ -1,0 +1,164 @@
+   0 ls
+   1 mkdir /home/
+   2 data
+   3 date
+   4 bash
+   5 exit
+   6 date > /tmp/file
+   7 echo hello world
+   8 echo "hello world"
+   9 echo "hello world" >> /tmp/file 
+  10 cat /tmp/file 
+  11 cat /etc/group
+  12 cd ~
+  13 pwd
+  14 cat /etc/group | wc -l
+  15 cat /etc/group | wc
+  16 wc --help
+  17 cat /etc/group | head
+  18 head --help
+  19 cat /etc/group | head -n3
+  20 cat /etc/group | tail 
+  21 cat /etc/group | tail -n3
+  22 tail --help
+  23 history | tail -n3 
+  24 history | tail -n3 >> /tmp/file 
+  25 cat /tmp/file 
+  26 wc -l < /etc/group
+  27 history | head 
+  28 grep --help
+  29 cat /etc/group | grep root
+  30 cat /etc/group | grep user2
+  31 cat /etc/group | grep user2 | wc -l
+  32 cat /etc/group | grep user2 | wc -l >> /tmp/file 
+  33 cat /etc/group | grep root
+  34 cat /etc/group | grep -v root
+  35 df
+  36 df -h
+  37 df -h | head -n2
+  38 df -h | head -n1
+  39 df -h | head -n2 
+  40 df -h | head -n2 | tail -1
+  41 df -h | grep /
+  42 df -h | grep -w / | awk 
+  43 df -h | awk '{print $5}'
+  44 awk --help
+  45 df -h | grep -w / | awk '{print $5}'
+  46 cat /etc/group | grep user2
+  47 cat /etc/group | grep user2 | sed 's/user2/ivan/g'
+  48 cat /etc/group | grep user2 | sed 's/user2/ivan'
+  49 cat /etc/group | grep user2 | sed 's/user2/ivan/g'
+  50 cat /etc/group | grep user2 | sed 's/user2/ivan/'
+  51 cat /etc/group | grep user2 | sed 's/user2/ivan/g'
+  52 df -h | grep -w / | awk '{print $5}'
+  53 df -h | grep -w / | awk '{print $5}' | sed 's/%//g'
+  54 ls -la /tmp/
+  55 ls -la /dev/
+  56 ls -la /tmp/
+  57 chmod 777 /tmp/file 
+  58 ls -la /tmp/
+  59 chmod 774 /tmp/file 
+  60 ls -la /tmp/
+  61 chmod o-r /tmp/file 
+  62 ls -la /tmp/
+  63 chmod g-wx /tmp/file 
+  64 ls -la /tmp/
+  65  
+  66 ls -la /tmp/
+  67 chmod u-w,u+x,g-r,g+x,o=w /tmp/file 
+  68 ls -la /tmp/
+  69 cat /tmp/file 
+  70 cat /proc/cpuinfo 
+  71 cat /proc/cpuinfo | head -n2
+  72 cat /proc/cpuinfo | head -n2 | tail -1
+  73 cat /proc/cpuinfo | head -n2 | tail -1 | awk -F ":" '{print $2}'
+  74 cat /proc/cpuinfo | head -n2 | tail -1 | awk '{print $2}'
+  75 cat /proc/cpuinfo awk '{print $2}'
+  76 cat /proc/cpuinfo | awk '{print $2}'
+  77 cat /proc/cpuinfo | awk '{print $3}'
+  78 cat /proc/cpuinfo | head -n2 | tail -1 | awk -F ":" '{print $2}'
+  79 cat /proc/cpuinfo | head -n2 | tail -1 | awk -F ":" '{print $2}' | sed 's/ //g' | 
+  80 cat /proc/cpuinfo | head -n2 | tail -1 | awk -F ":" '{print $2}' | sed 's/ //g' | sed 's/86/16/g'
+  81 grep -r root /etc/
+  82 grep -r root /etc/ | grep "root:"
+  83 grep -r root /etc/ | grep "root:" | awk -F ":" '{print $1}'
+  84 grep -r root /etc/ > /tmp/1.log
+  85 ls -lh /tmp/1.log 
+  86 grep root: /tmp/1.log 
+  87 grep root: /tmp/1.log | awk -F ":" '{print $1}'
+  88 grep root: /tmp/1.log | awk -F ":" '{print $1}' | wc -l
+  89 grep root: /tmp/1.log | awk -F ":" '{print $1}' | uniq
+  90 grep root: /tmp/1.log | awk -F ":" '{print $1}' | uniq | wc -l
+  91 ls -lh /tmp/1.log 
+  92 cat /tmp/1.log 
+  93 cat /tmp/1.log  | grep bin
+  94 cat /tmp/1.log  | grep bin | sed 's/bin/BOOM/g'
+  95 cat /tmp/1.log  | grep bin | sed 's/bin/BOOM/g' | awk -F ":" '{print $2}'
+  96 cat /tmp/1.log  | grep bin | sed 's/bin/BOOM/g' | awk -F ":" '{print $2}' | grep BOOM 
+  97 cat /tmp/1.log  | grep bin | sed 's/bin/BOOM/g' | awk -F ":" '{print $2}' | grep BOOM | wc -l
+  98 cat /etc/group
+  99 cat /etc/group | wc -l
+ 100 cat /etc/group000 | wc -l
+ 101 cat /etc/group000 | wc -l && echo error
+ 102 cat /etc/group | wc -l && echo error
+ 103 cat /etc/group | wc -l || echo error
+ 104 cat /etc/group00 | wc -l || echo error
+ 105 cat /etc/group 
+ 106 mkdir /home/
+ 107 mkdir /home/ || echo error
+ 108 mkdir /home/ && echo error
+ 109 mkdir /home/
+ 110 mkdir /home/ || echo error
+ 111 mkdir /home/ || mkdir /home123
+ 112 ls /
+ 113 rmdir /home123/
+ 114 mkdir /home/ && mkdir /home123
+ 115 ls /
+ 116 cat /etc/passwd
+ 117 cat /etc/passwd | awk -F ":" '{print $5}' 
+ 118 cat /etc/passwd | awk -F ":" '{print $5}' | uniq
+ 119 cat /etc/passwd | awk -F ":" '{print $5}' | uniq | grep o
+ 120 cat /etc/passwd | awk -F ":" '{print $5}' | uniq | grep o | grep -v e
+ 121 cat /etc/passwd | awk -F ":" '{print $5}' | uniq | grep o | grep -v e | sed 's/o/0/g'
+ 122 find --help
+ 123 cat /etc/passwd | awk -F ":" '{print $5}' | uniq | grep o | grep -v e | sed 's/o/0/g'
+ 124 cat /etc/passwd | awk -F ":" '{print $5}' | uniq | grep o | grep -v e | sed 's/o/0/g' >> /tmp/file 
+ 125 cat /etc/passwd
+ 126 cat /etc/passwd | head
+ 127 cat /etc/passwd | head +2
+ 128 head --help
+ 129 cat /etc/passwd | head +b2
+ 130 cat /etc/passwd | head -n-2 
+ 131 cat /etc/passwd | head -n-20 
+ 132 cat /etc/passwd | tail  -n-1
+ 133 cat /etc/passwd | tail  -n+1
+ 134 cat /etc/passwd | head -n-20 
+ 135 cat /etc/passwd | head -n-25
+ 136 cat /etc/passwd | tail -n-20
+ 137 cat /etc/passwd | tail -n20
+ 138 cat /etc/passwd | tail -n+20
+ 139 cat /etc/passwd | tail -n+20 | sort
+ 140 sort --help
+ 141 cat /etc/passwd | tail -n+20 | sort -d
+ 142 ls -l /tmp/1.log 
+ 143 > /tmp/1.log 
+ 144 ls -l /tmp/1.log 
+ 145 ls /
+ 146 ls / | wc -l
+ 147 cat --help
+ 148 wc -l
+ 149 head 
+ 150 ls / 
+ 151 ls / | grep -v var
+ 152 ls / | grep var
+ 153 ls / | grep -w var
+ 154 mkdir /var_var
+ 155 ls / | grep var
+ 156 ls / | grep -w var
+ 157 df -h
+ 158 df -h | awk '{print $4}'
+ 159 df -h | awk -F " " '{print $4}'
+ 160 df -h | awk -F "." '{print $4}'
+ 161 df -h | sed 's/%/!!!/g'
+ 162 chmod --help
+ 163 history > /tmp/history.txt
